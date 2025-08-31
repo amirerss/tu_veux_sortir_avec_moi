@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Bekliyorum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" loop autoplay>
+        <source src="chill_music.mp3" type="audio/mpeg">
+        Tarayıcınız ses öğesini desteklemiyor.
+    </audio>
+
+    <div class="container" id="page1">
+        <div class="content">
+            <h1>Lütfen dikkat!</h1>
+            <p>Bu siteyi tek başına ve etrafında kimse yokken ziyaret etmeni rica ediyorum.</p>
+            <button onclick="nextPage()">Devam Et</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="page2">
+        <div class="content">
+            <h1>Belki bir Kenan Yıldız değilim ama sen benim yıldızım olabilir misin?</h1>
+            <div class="buttons">
+                <button onclick="showYayMessage()">Evet</button>
+                <button onclick="showConfirmMessage()">Hayır</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="message-box hidden" id="yayMessage">
+        <p>Yaşasın! 😍</p>
+        <button onclick="hideMessageBox('yayMessage')">Tamam</button>
+    </div>
+
+    <div class="message-box hidden" id="confirmMessage">
+        <p>Emin misin?</p>
+        <div class="message-buttons">
+            <button onclick="showSecretMessage()">Evet</button>
+            <button onclick="hideMessageBox('confirmMessage')">Hayır</button>
+        </div>
+    </div>
+
+    <div class="message-box hidden" id="secretMessage">
+        <p>Lütfen kimseye söyleme, çok utanırım! 😔</p>
+        <button onclick="showSadMessage()">Tamam</button>
+    </div>
+
+    <div class="message-box hidden" id="sadMessage">
+        <p>Üzüldüm ama yine de teşekkür ederim. 😔</p>
+        <button onclick="hideMessageBox('sadMessage')">Tamam</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
